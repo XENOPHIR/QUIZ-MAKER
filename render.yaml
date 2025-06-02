@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: quiz-maker
+    env: docker
+    plan: free
+    branch: main
+    repo: https://github.com/XENOPHIR/QUIZ-MAKER
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: SECRET_KEY
+        sync: false
