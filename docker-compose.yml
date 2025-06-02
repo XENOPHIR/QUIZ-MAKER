@@ -10,7 +10,7 @@ services:
       MYSQL_USER: quiz_user
       MYSQL_PASSWORD: quiz_pass
     ports:
-      - "4306:3306"
+      - "3307:3306"
     volumes:
       - db_data:/var/lib/mysql
 
