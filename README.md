@@ -1,71 +1,51 @@
-# 🧠 Quiz Generator App
+# 🧠 QUIZ-MAKER
 
-This is a lightweight quiz app built with Flask and MySQL. You can upload a file with 300+ questions, take a quiz of 10 random questions, and view your score + review incorrect answers.
+A simple Flask-based quiz application with MySQL database, Docker support, and Bootstrap UI.
 
----
+## 🚀 Quick Start (Windows + Docker)
 
-## 🚀 Local Setup with Docker
+0. **SHORTLY:**
 
-> Recommended for fastest start
+    ```bash
+    git clone https://github.com/XENOPHIR/QUIZ-MAKER.git
+    cd QUIZ-MAKER
+    copy .env.example .env
+    docker compose up --build
+    ```
 
-### 1. Install Docker:  
+1. **Clone the repository:**
 
-https://docs.docker.com/get-docker/
+   ```bash
+   git clone https://github.com/XENOPHIR/QUIZ-MAKER.git
+   cd QUIZ-MAKER
+   ```
 
-### 2. Clone the project and create config files
+2. **Create environment file:**
 
-```bash
-cp .env.example .env
-Modify .env if needed (MySQL settings, etc.)
+    ```bash
+    copy .env.example .env
+    ```
 
-3. Run the project
-bash
-Copy
-Edit
-docker compose up --build
-4. Access the app
-Quiz app: http://localhost:5000
+3. **Run the app using Docker:**
 
-Adminer (DB GUI): http://localhost:8080
+    ```bash
+    docker compose up --build
+    ```
 
-Server: db, user: quiz_user, password: quiz_pass, DB: quiz_db
+4. **Open your browser and go to:**
 
-🧪 Local Setup without Docker
-1. Install Python
-Make sure Python 3.10+ is installed.
+    ```bash
+    http://localhost:8080
+    ```
 
-2. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-3. Setup environment variables
-Create .env:
+## 🧾 Features
 
-env
-Copy
-Edit
-DB_HOST=localhost
-DB_PORT=3306
-DB_NAME=quiz_db
-DB_USER=root
-DB_PASSWORD=4444
-You need a running MySQL instance manually created (e.g., via XAMPP, MAMP, or system service).
+-Random quiz generation from DB
+-Result calculation and review
+-MySQL integration via Docker
+-Clean Bootstrap-based UI
 
-4. Run the app
-bash
-Copy
-Edit
-python app.py
-Then go to d
+## ⚙️ Requirements
 
-📦 File Format for Upload
-vbnet
-Copy
-Edit
-Question: What is the capital of France?
-A) Berlin
-B) Madrid
-C) Paris
-D) Rome
-Answer: C
+-Docker Desktop
+-Git (or just download ZIP)
